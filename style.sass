@@ -1,0 +1,257 @@
+$fontOswald:  'Oswald', sans-serif
+$fontRoboto: 'Roboto Slab', serif
+$menuColor: #48689a
+$colorWhite: #ffffff
+$logoColor: #00cdc6
+=flex($direction: row, $alignItems: center, $justifyContent: center)
+	display: flex
+	align-items: $alignItems
+	justify-content: $justifyContent
+	flex-direction: $direction
+
+.weshop_btn
+	width:170px
+	height: 50px
+	background-color: $menuColor
+	color: $colorWhite
+	border: none
+	outline: none
+	font-size: 14px
+	font-weight: 300
+	text-transform: uppercase
+	font-family: $fontRoboto
+
+
+body
+	font-family: $fontRoboto
+	header
+		
+		.heading
+			background-color:  $menuColor
+		.subnav
+			+flex($justifyContent: space-between)
+			color: #eeeeee
+			font-family: $fontRoboto
+			font-weight: 300
+			font-size: 12px
+			flex-wrap: wrap
+			.contact_info
+				+flex()
+				@media screen and (max-width:998px)
+					width: 100%
+					justify-content: space-between
+
+			.header_form
+				margin: 0 30px 0 30px
+				position: relative
+				@media screen and (max-width:998px)
+					width: 100%
+				input
+					width: 300px
+					background-color: transparent
+					border: none
+					border-bottom: 1px solid $colorWhite
+					color: $colorWhite
+					outline: none
+					@media screen and (max-width:998px)
+						width: 100%
+					
+				::placeholder
+					color: $colorWhite
+					font-family: $fontRoboto
+					font-size: 12px
+					font-weight: 300
+				button
+					background-color: transparent
+					color: #9aa6b9
+					border: none
+					outline: none
+					position: absolute
+					top: 0
+					right: 0
+			.subnav_ul
+				+flex()
+				list-style: none
+				@media screen and (max-width:998px)
+					width: 100%
+
+				li
+					a
+						color: #eeeeee
+					.dropdown-item
+						&:hover
+							background-color: $logoColor
+
+			.btn_sabnav
+				background-color: transparent
+				border: none
+				color: $colorWhite
+				font-weight: 300
+				padding: 0 20px
+				outline: none
+		.navbar
+
+			.logo
+				width: 157px
+				height:48px
+				box-sizing: border-box
+				border: 2px solid $logoColor
+				text-decoration: none				
+				font-size: 40px
+				+flex()
+				font-family: $fontOswald
+				font-weight: 500
+				a
+					+flex()
+					width: 100%
+					height: 100%
+					margin-bottom: 10px
+					color: $logoColor
+					text-decoration: none
+			.basket
+				+flex()
+				@media screen and (max-width:998px)
+					display: none
+
+				.dropdown-menu
+					left:-200px
+					box-shadow: 0 0 10px  rgba(0,0,0,0.5)
+					font-size: 14px
+					font-family: $fontRoboto
+
+					p	
+						margin: 0 10px
+					span
+						color: $menuColor
+					.close
+						border: none
+						outline:none
+						background-color: transparent
+					button
+						width:80%
+						margin:5px 25px
+						padding: 15px
+						font-size: 14px
+						text-transform: uppercase
+						color: $menuColor
+						background-color: $colorWhite
+						border: 2px solid $menuColor
+						transition: 0.3s
+						&:hover
+							background-color: $menuColor
+							color: $colorWhite
+							transition: 0.3s
+
+				.circle
+					width: 39px
+					height: 39px
+					+flex()					
+					border: 1px solid $colorWhite
+					border-radius: 50%
+					position: relative
+
+
+				.quantity
+					width: 17px
+					height: 17px
+					border-radius: 50%
+					background-color: $colorWhite
+					font-size: 12px
+					+flex()
+					position: absolute
+					top: -6px
+					right: -4px
+				
+				span
+					color: #eeeeee
+					font-size: 14px
+					font-weight: 500
+					margin-left: 15px
+			.dropdown_container
+				position:relative
+				a
+					font-family: $fontRoboto
+				i
+					font-size: 10px
+
+				.dropdown_menu
+					
+					display: none
+					background-color: $colorWhite
+					box-shadow: 0 0 10px  rgba(0,0,0,0.5)
+					padding: 50px
+					z-index: 2
+				&.active
+					.dropdown_menu
+						display: block
+						position: absolute
+						left: 100px
+						@media screen and (max-width:998px)
+							position: static
+					ul
+						padding: 10px
+						li
+							list-style: none							
+
+							a
+								color: #3c4852
+								text-decoration: none
+								font-size: 14px
+								font-weight: 500
+								font-family: $fontRoboto
+								line-height: 28px
+								transition: 0.3s
+								&:hover
+									color: $logoColor
+									transition: 0.3s
+						h5
+							font-size: 15px
+							font-weight: 700
+							font-family: $fontRoboto
+							padding-bottom: 15px
+							border-bottom: 1px solid rgb(238, 238, 238)
+
+				img
+					display: block
+					position: relative
+				span
+					font-size: 24px
+					font-weight: 600
+					text-transform: uppercase
+					position: absolute
+					color: #48689a
+					top: 55px
+					left: 30px
+				
+
+				.line
+						width: 96px
+						height: 2px
+						background-color: #48689a	
+						position: absolute
+						&:first-of-type
+							top: 90px
+							left: 32px
+
+						&:last-of-type
+							width: 60px
+							top: 99px
+							left: 32px
+		.title_header
+			width: 100%
+			height: 625px
+			+flex()
+			font-family: $fontRoboto
+
+
+			h1
+				font-size: 50px
+				font-weight: 700
+				text-transform: uppercase
+			h3
+				font-size: 40px
+				text-transform: uppercase
+
+				span
+					color: $menuColor
+
