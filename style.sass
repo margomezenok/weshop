@@ -3,6 +3,8 @@ $fontRoboto: 'Roboto Slab', serif
 $menuColor: #48689a
 $colorWhite: #ffffff
 $logoColor: #00cdc6
+$aColor: #15232d
+$blockColor: #f1edee
 =flex($direction: row, $alignItems: center, $justifyContent: center)
 	display: flex
 	align-items: $alignItems
@@ -21,11 +23,57 @@ $logoColor: #00cdc6
 	text-transform: uppercase
 	font-family: $fontRoboto
 
+.carousel-control-next
+	right: -70px !important
 
+.carousel-control-prev
+	left: -70px !important
+
+.button
+	border: 2px solid $menuColor
+	width: 166px
+	height: 46px
+	margin: 0 auto
+	background-color: transparent
+	color: $menuColor
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 600
+	transition: 0.3s
+	&:hover
+		background-color: $menuColor
+		color: $colorWhite
+		transition: 0.3s
+
+.arrow
+	position: relative
+	span
+		width: 35px
+		height: 3px
+		background-color: $menuColor
+		display: block
+		position: absolute
+		&:first-child
+			width: 20px
+			transform: rotate(45deg)
+			top: -6px
+			left: 19px
+		&:last-child
+			width: 20px
+			transform: rotate(-45deg)
+			top: 6px
+			left: 19px
+
+.line
+	width: 40px
+	height: 2px
+	background-color: #9aa6b9
+	margin: 12px 0 25px 0
 body
 	font-family: $fontRoboto
-	header
-		
+
+
+	header		
 		.heading
 			background-color:  $menuColor
 		.subnav
@@ -112,6 +160,7 @@ body
 				+flex()
 				@media screen and (max-width:998px)
 					display: none
+				
 
 				.dropdown-menu
 					left:-200px
@@ -125,7 +174,7 @@ body
 						color: $menuColor
 					.close
 						border: none
-						outline:none
+						outline: none
 						background-color: transparent
 					button
 						width:80%
@@ -168,14 +217,12 @@ body
 					font-weight: 500
 					margin-left: 15px
 			.dropdown_container
-				position:relative
 				a
 					font-family: $fontRoboto
 				i
 					font-size: 10px
 
-				.dropdown_menu
-					
+				.dropdown_menu					
 					display: none
 					background-color: $colorWhite
 					box-shadow: 0 0 10px  rgba(0,0,0,0.5)
@@ -248,10 +295,320 @@ body
 				font-size: 50px
 				font-weight: 700
 				text-transform: uppercase
+				@media screen and (max-width:576px)
+					font-size: 40px
 			h3
 				font-size: 40px
 				text-transform: uppercase
+				@media screen and (max-width:576px)
+					font-size: 30px
 
 				span
 					color: $menuColor
+
+	.collection
+		width: 100%
+		padding: 50px 0
+		font-family: $fontRoboto
+
+		.wrapper
+			width: 100%			
+			.offer
+				border: 5px solid #eeeeee
+				padding: 12px 25px
+				margin: 10px 20px
+				
+				.link
+					border: 5px solid transparent
+					padding: 10px
+
+					&:hover
+						border: 5px solid $menuColor
+
+				h5
+					font-size: 24px
+					font-weight: 800
+				h4
+					font-size: 37px
+					color: $menuColor
+					font-weight: 800
+
+				p
+					font-size: 24px
+					font-weight: 800
+					text-transform: uppercase
+					span
+						color: $menuColor
+				a
+					color: #000000
+					text-decoration: none
+					transition: 0.3s
+					&:hover
+						color: $menuColor
+						transition: 0.3s
+	.service
+		width: 100%
+		padding: 50px 0
+		font-family: $fontRoboto
+		h5
+			font-size: 14px
+			font-weight: 600
+			text-transform: uppercase
+		p
+			font-size: 14px
+			line-height: 30px
+	.lifestyle
+		padding: 50px 0
+		font-family: $fontRoboto 
+		.mensLifestyle
+			width: 300px
+			height: 420px
+			border: 4px solid $menuColor
+			+flex($direction: column)
+			h5
+				font-size: 24px
+				font-weight: 600
+				text-transform: uppercase
+
+		.new
+			+flex()
+			position: absolute
+			left: 40px
+			bottom: 180px
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			background-color: $menuColor
+			color: $colorWhite
+			font-size: 14px			
+			font-weight: 300
+	.collection
+		@extend .lifestyle
+		.navbar
+			.navbar-brand
+				color: $aColor
+				text-transform: uppercase
+				font-size: 24px
+				font-weight: 700
+			.navbar-nav				
+				.nav-link
+					color: $aColor
+					text-transform: uppercase
+					font-size: 14px
+					transition: 0.3s
+					&:hover
+						color: $menuColor
+						transition: 0.3s
+
+
+		.grid-container
+			width: 100%			
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr 1fr
+			grid-template-rows: 1fr 1fr
+			grid-template-areas: "one two three four" "five six seven eight"
+			grid-gap: 10px
+			@media screen and (max-width:998px)
+				grid-template-columns: 1fr 1fr 
+				grid-template-rows: 1fr 1fr 1fr 1fr
+				grid-template-areas: "one two" "three four" "five six" "seven eight"
+
+			@media screen and (max-width:576px)
+				grid-template-columns: 1fr  
+				grid-template-rows: 1fr 1fr 1fr 1fr
+				grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight"
+					
+			.galery
+				background-image: url(img/collection_img.jpg)
+				height: 340px
+				position: relative
+			.one
+				grid-area: one
+				
+			.two
+				grid-area: two
+				
+			.five
+				grid-area: five
+				
+			.six
+				grid-area: six
+				
+			.seven
+				grid-area: seven
+				
+			.four
+				grid-area: four
+				
+			.eight
+				grid-area: eight
+				
+			.three
+				grid-area: three
+			img
+				position: absolute
+				right: -1px
+				bottom: 30px
+				&:nth-child(2)
+					right: -2px
+					bottom: 80px
+				&:nth-child(3)
+					right: -1px
+					bottom: 130px
+				&:last-child
+					right: -1px
+					bottom: 30px	
+			.grid_hover
+				width: 100%
+				height: 100%				
+				opacity: 0
+				transition: 0.3s
+				&:hover
+					opacity: 1
+					transition: 0.3s
+				.priсe
+					width: 53px
+					height: 37px
+					background-color: $menuColor
+					+flex()
+					color: $colorWhite
+	.assistent
+		margin: 70px 0
+		width: 100%
+		height: 600px
+		background-color: $blockColor
+		+flex()
+		font-family: $fontRoboto
+
+		.carousel-inner
+			.carousel-item
+				h2
+					font-size: 40px
+					font-weight: 600
+					letter-spacing: 10px
+					text-align: center
+					@media screen and (max-width:576px)
+						font-size: 30px
+					span
+						color: $menuColor
+				p
+					font-size: 24px
+					text-align: center
+					@media screen and (max-width:576px)
+						font-size: 15px
+
+	.featured
+		@extend .collection
+		.grid-container
+			width: 100%			
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr 1fr
+			grid-template-rows: 1fr 
+			grid-gap: 10px
+			@media screen and (max-width:998px)
+				grid-template-columns: 1fr 1fr 
+				grid-template-rows: 1fr 1fr 
+				
+
+			@media screen and (max-width:576px)
+				grid-template-columns: 1fr  
+				grid-template-rows: 1fr 1fr 1fr 1fr
+	.coming_soon
+		@extend .collection
+
+		.mens_collection
+			width: 550px
+			height: 350px
+			+flex()
+			background-color: #f2f1ed				
+			.mens_collection_hover
+				width: 100%
+				height: 100%
+				background-color: #faf9f8
+				border: 20px solid #f2f1ed
+				+flex($direction: column)
+				opacity: 0
+				transition: 0.3s
+				&:hover
+					opacity: 1
+					transition: 0.3s
+				h5
+					font-size: 24px
+					font-weight: 700
+					text-transform: uppercase
+					text-align: center
+				p
+					font-size: 24px
+					letter-spacing: 8px
+					text-transform: uppercase
+					margin-top: 10px
+	.latest_news
+		@extend .collection
+		h3
+			font-size: 24px
+			font-weight: 700
+			text-transform: uppercase
+			text-align: center
+		p
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 600
+		.social_links
+			font-size: 14px			
+		.data
+			width: 44px
+			height: 44px
+			background-color: $menuColor
+			color: $colorWhite
+			font-size: 14px
+			text-align: center
+			text-transform: uppercase
+			+flex()
+			position: absolute
+			top: -25px
+			left: -10px
+			&:before
+				content: ""
+				width: 44px
+				height: 44px
+				border: 2px solid $menuColor
+				position: absolute
+				top: -8px
+				left: -8px
+				z-index: -1
+		a
+			font-size: 14px
+			color: $aColor
+			text-decoration: none
+			transition: 0.3s
+			&:hover
+				color: $menuColor
+				transition: 0.3s
+	.top_categories
+		@extend .lifestyle
+		.top_categories_product
+			border-bottom: 1px solid #eeeeee
+			position: relative
+		h4
+			font-size: 18px
+			font-weight: 700
+			text-transform: uppercase
+		h6
+			font-size: 14px
+			font-weight: 500
+		p
+			font-size: 14px
+			color: $menuColor
+			font-weight: 500
+			margin: 8px 0
+		.product_hover
+			position: absolute
+			left: 86px
+			bottom: 24px
+			opacity: 0
+			transition: 0.3s
+			&:hover
+				opacity: 1
+				transition: 0.3s	
+				
 
