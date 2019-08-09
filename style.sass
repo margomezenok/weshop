@@ -886,3 +886,46 @@ body
 				text-transform: uppercase
 
 
+.error_header
+	height: 100vh
+	font-family: $fontRoboto
+	.title_error_page
+		width: 100%
+		height: calc(100vh - 130px)
+		+flex($direction: column)
+		@media screen and (max-width: 998px)
+			height: calc(100vh - 184px)		
+		>img
+			@media screen and (max-width: 768px)
+				width: 400px
+			@media screen and (max-width: 768px)
+				width: 60%
+		.back_to_home
+			width: 400px
+			height: 70px
+			background-color: transparent
+			border: 2px solid #3c4852
+			outline: none
+			font-size: 24px
+			+flex()
+			color: #3c4852
+			text-decoration: none
+			margin-top: 90px
+			transition: 0.3s
+			&:hover
+				color: $colorWhite
+				background-color: $menuColor
+				border-color: $menuColor
+				transition: 0.3s 
+			@media screen and (max-width: 768px)
+				width: 60%
+			
+				
+		.find_us
+			width: 230px
+			+flex($justifyContent: space-between)
+			margin-top: 105px
+			a
+				color: #3c4852
+
+
