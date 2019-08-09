@@ -19,15 +19,18 @@ $blockColor: #f1edee
 	border: none
 	outline: none
 	font-size: 14px
-	font-weight: 300
 	text-transform: uppercase
 	font-family: $fontRoboto
+	outline: none !important
+	transition: 0.3s
+	border: 2px solid $menuColor
 
-.carousel-control-next
-	right: -70px !important
+	&:hover
+		background-color: transparent
+		color: $menuColor
+		border: 2px solid $menuColor
+		transition: 0.3s
 
-.carousel-control-prev
-	left: -70px !important
 
 .button
 	border: 2px solid $menuColor
@@ -228,13 +231,14 @@ body
 					box-shadow: 0 0 10px  rgba(0,0,0,0.5)
 					padding: 50px
 					z-index: 2
-				&.active
+				&:hover
 					.dropdown_menu
 						display: block
 						position: absolute
 						left: 100px
 						@media screen and (max-width:998px)
 							position: static
+							display: none
 					ul
 						padding: 10px
 						li
@@ -289,6 +293,8 @@ body
 			height: 625px
 			+flex()
 			font-family: $fontRoboto
+			@media screen and (max-width:992px)
+				text-align: center
 
 
 			h1
@@ -305,6 +311,20 @@ body
 
 				span
 					color: $menuColor
+			
+			.control
+				@media screen and (max-width:992px)
+					display: none
+
+			.carousel-control-next
+				right: -70px !important
+				opacity: 0
+
+			.carousel-control-prev
+				left: -70px !important
+				opacity: 0
+
+
 
 	.collection
 		width: 100%
@@ -332,6 +352,8 @@ body
 					font-size: 37px
 					color: $menuColor
 					font-weight: 800
+					@media screen and (max-width:576px)
+						font-size: 30px
 
 				p
 					font-size: 24px
@@ -369,6 +391,7 @@ body
 				font-size: 24px
 				font-weight: 600
 				text-transform: uppercase
+				text-align: center
 
 		.new
 			+flex()
@@ -488,14 +511,149 @@ body
 					letter-spacing: 10px
 					text-align: center
 					@media screen and (max-width:576px)
-						font-size: 30px
+						font-size: 25px
 					span
 						color: $menuColor
 				p
 					font-size: 24px
 					text-align: center
 					@media screen and (max-width:576px)
-						font-size: 15px
+						font-size: 10px
+
+		.carousel-control-prev
+			&:hover .carusel_arrow
+					span
+						width: 14px
+						height: 4px
+						background-color: $colorWhite
+						position: absolute
+						display: block
+						transition: 0.3s
+						&:first-child
+							transform: rotate(-45deg)
+							top: 9px
+							left: 6px
+							
+						&:nth-child(2)
+							width: 16px
+							top: 13px
+							left: 9px
+							opacity: 1
+							transition: 0.3s
+							
+						&:last-child
+							transform: rotate(45deg)
+							bottom: 9px
+							left: 6px						
+			.carusel_arrow
+				width: 30px
+				height: 30px
+				background-color: $menuColor
+				position: relative
+				transition: 0.3s
+				&:hover
+					span
+						width: 14px
+						height: 4px
+						background-color: $colorWhite
+						position: absolute
+						display: block
+						transition: 0.3s
+						&:first-child
+							transform: rotate(-45deg)
+							top: 9px
+							left: 6px
+							
+						&:nth-child(2)
+							width: 16px
+							top: 13px
+							left: 9px
+							opacity: 1
+							transition: 0.3s
+							
+						&:last-child
+							transform: rotate(45deg)
+							bottom: 9px
+							left: 6px										
+
+				span
+					width: 17px
+					height: 4px
+					background-color: $colorWhite
+					position: absolute
+					display: block
+					transition: 0.3s
+					&:first-child
+						transform: rotate(-45deg)
+						top: 8px
+						left: 6px
+					&:nth-child(2)
+						top: 13px
+						left: 9px
+						opacity: 0
+						transition: 0.3s
+					&:last-child
+						transform: rotate(45deg)
+						bottom: 8px
+						left: 6px
+		.carousel-control-next
+			&:hover .carusel_arrow 
+					span
+						width: 14px
+						height: 4px
+						background-color: $colorWhite
+						position: absolute
+						display: block
+						transition: 0.3s
+						&:first-child
+							transform: rotate(45deg)
+							top: 9px
+							left: 11px
+							
+						&:nth-child(2)
+							width: 16px
+							top: 13px
+							left: 6px
+							opacity: 1
+							transition: 0.3s
+							
+						&:last-child
+							transform: rotate(-45deg)
+							bottom: 9px
+							left: 11px								
+			.carusel_arrow
+				width: 30px
+				height: 30px
+				background-color: $menuColor
+				position: relative
+				transition: 0.3s
+											
+
+				span
+					width: 17px
+					height: 4px
+					background-color: $colorWhite
+					position: absolute
+					display: block
+					transition: 0.3s
+					&:first-child
+						transform: rotate(45deg)
+						top: 8px
+						left: 8px
+					&:nth-child(2)
+						top: 13px
+						left: 6px
+						opacity: 0
+						transition: 0.3s
+					&:last-child
+						transform: rotate(-45deg)
+						bottom: 8px
+						left: 8px
+
+		.carousel-control-prev,	.carousel-control-next		
+			@media screen and (max-width:1200px)
+				display: none
+				
 
 	.featured
 		@extend .collection
@@ -542,6 +700,7 @@ body
 					letter-spacing: 8px
 					text-transform: uppercase
 					margin-top: 10px
+					text-align: center
 	.latest_news
 		@extend .collection
 		h3
@@ -610,5 +769,120 @@ body
 			&:hover
 				opacity: 1
 				transition: 0.3s	
-				
+	.newsletter
+		@extend .lifestyle
+		.newsletter_pictures
+			max-width: 557px
+			height: 300px
+			+flex()
+			background-color: $blockColor
+			padding: 10px			
+			.newsletter_pictures_content
+				width: 100%
+				height: 100%
+				border: 5px solid $colorWhite
+		h4
+			font-size: 24px
+			font-weight: 700
+			text-transform: uppercase
+		p
+			font-size: 14px
+			margin: 15px 0 25px
+			text-align: center 
+		form
+			position: relative 
+			input
+				width: 350px
+				padding: 10px
+				font-size: 12px
+				outline: none
+				@media screen and (max-width:576px)
+					width: 280px
+			.arrow
+				position: absolute
+				top: 20px
+				right: 40px 
+				span
+					width: 25px
+					height: 2px
+					background-color: $aColor
+					display: block
+					position: absolute
+					&:first-child
+						width: 10px
+						transform: rotate(45deg)
+						top: -4px
+						left: 15px
+					&:last-child
+						width: 10px
+						transform: rotate(-45deg)
+						top: 4px
+						left: 15px
+	footer
+		font-family: $fontRoboto
+		padding: 50px 0 0 0 
+		
+		h3
+			font-size: 40px
+			font-weight: 700
+			font-family: $fontOswald
+			color: $menuColor
+		p
+			font-size: 14px
+			font-weight: 300
+			line-height: 25px
+		h5
+			font-size: 14px
+			font-weight: 500
+			text-transform: uppercase
+			margin: 20px 0 
+		ul
+			list-style: none
+			padding: 0
+
+			
+			a
+				font-size: 14px
+				color: $aColor
+				font-weight: 300
+				text-decoration: none !important
+				transition: 0.3s
+				&:hover
+					color: $logoColor
+					transition: 0.3s
+		.payment_methods
+			padding: 20px
+			border-top: 1px solid #eeeeee
+			border-bottom: 1px solid #eeeeee
+
+		.social_links
+			width: 350px
+			border-bottom: 1px solid #eeeeee
+			padding: 50px 0 25px 0
+			margin-bottom: 30px
+			+flex()
+			@media screen and (max-width:576px)
+				width: auto
+			a					
+				font-size: 20px
+				color: $aColor
+				text-decoration: none
+				margin: 0 15px 
+				transition: 0.3s
+				&:hover
+					color: $menuColor
+					transition: 0.3s
+	.copyright
+		width: 100%
+		height: 40px
+		background-color: $menuColor
+		+flex()
+		text-align: center
+		p
+			color: $colorWhite
+			font-size: 12px
+			margin: 0
+			span
+				text-transform: uppercase
+
 

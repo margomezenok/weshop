@@ -7,17 +7,17 @@
   border: none;
   outline: none;
   font-size: 14px;
-  font-weight: 300;
   text-transform: uppercase;
   font-family: "Roboto Slab", serif;
+  outline: none !important;
+  transition: 0.3s;
+  border: 2px solid #48689a;
 }
-
-.carousel-control-next {
-  right: -70px !important;
-}
-
-.carousel-control-prev {
-  left: -70px !important;
+.weshop_btn:hover {
+  background-color: transparent;
+  color: #48689a;
+  border: 2px solid #48689a;
+  transition: 0.3s;
 }
 
 .button {
@@ -273,23 +273,24 @@ body header .navbar .dropdown_container .dropdown_menu {
   padding: 50px;
   z-index: 2;
 }
-body header .navbar .dropdown_container.active .dropdown_menu {
+body header .navbar .dropdown_container:hover .dropdown_menu {
   display: block;
   position: absolute;
   left: 100px;
 }
 @media screen and (max-width: 998px) {
-  body header .navbar .dropdown_container.active .dropdown_menu {
+  body header .navbar .dropdown_container:hover .dropdown_menu {
     position: static;
+    display: none;
   }
 }
-body header .navbar .dropdown_container.active ul {
+body header .navbar .dropdown_container:hover ul {
   padding: 10px;
 }
-body header .navbar .dropdown_container.active ul li {
+body header .navbar .dropdown_container:hover ul li {
   list-style: none;
 }
-body header .navbar .dropdown_container.active ul li a {
+body header .navbar .dropdown_container:hover ul li a {
   color: #3c4852;
   text-decoration: none;
   font-size: 14px;
@@ -298,11 +299,11 @@ body header .navbar .dropdown_container.active ul li a {
   line-height: 28px;
   transition: 0.3s;
 }
-body header .navbar .dropdown_container.active ul li a:hover {
+body header .navbar .dropdown_container:hover ul li a:hover {
   color: #00cdc6;
   transition: 0.3s;
 }
-body header .navbar .dropdown_container.active ul h5 {
+body header .navbar .dropdown_container:hover ul h5 {
   font-size: 15px;
   font-weight: 700;
   font-family: "Roboto Slab", serif;
@@ -346,6 +347,11 @@ body header .title_header {
   flex-direction: row;
   font-family: "Roboto Slab", serif;
 }
+@media screen and (max-width: 992px) {
+  body header .title_header {
+    text-align: center;
+  }
+}
 body header .title_header h1 {
   font-size: 50px;
   font-weight: 700;
@@ -367,6 +373,19 @@ body header .title_header h3 {
 }
 body header .title_header h3 span {
   color: #48689a;
+}
+@media screen and (max-width: 992px) {
+  body header .title_header .control {
+    display: none;
+  }
+}
+body header .title_header .carousel-control-next {
+  right: -70px !important;
+  opacity: 0;
+}
+body header .title_header .carousel-control-prev {
+  left: -70px !important;
+  opacity: 0;
 }
 body .collection, body .latest_news, body .coming_soon, body .featured {
   width: 100%;
@@ -396,6 +415,11 @@ body .collection .wrapper .offer h4, body .latest_news .wrapper .offer h4, body 
   font-size: 37px;
   color: #48689a;
   font-weight: 800;
+}
+@media screen and (max-width: 576px) {
+  body .collection .wrapper .offer h4, body .latest_news .wrapper .offer h4, body .coming_soon .wrapper .offer h4, body .featured .wrapper .offer h4 {
+    font-size: 30px;
+  }
 }
 body .collection .wrapper .offer p, body .latest_news .wrapper .offer p, body .coming_soon .wrapper .offer p, body .featured .wrapper .offer p {
   font-size: 24px;
@@ -428,11 +452,11 @@ body .service p {
   font-size: 14px;
   line-height: 30px;
 }
-body .lifestyle, body .top_categories, body .collection, body .latest_news, body .coming_soon, body .featured {
+body .lifestyle, body .newsletter, body .top_categories, body .collection, body .latest_news, body .coming_soon, body .featured {
   padding: 50px 0;
   font-family: "Roboto Slab", serif;
 }
-body .lifestyle .mensLifestyle, body .top_categories .mensLifestyle, body .collection .mensLifestyle, body .latest_news .mensLifestyle, body .coming_soon .mensLifestyle, body .featured .mensLifestyle {
+body .lifestyle .mensLifestyle, body .newsletter .mensLifestyle, body .top_categories .mensLifestyle, body .collection .mensLifestyle, body .latest_news .mensLifestyle, body .coming_soon .mensLifestyle, body .featured .mensLifestyle {
   width: 300px;
   height: 420px;
   border: 4px solid #48689a;
@@ -441,12 +465,13 @@ body .lifestyle .mensLifestyle, body .top_categories .mensLifestyle, body .colle
   justify-content: center;
   flex-direction: column;
 }
-body .lifestyle .mensLifestyle h5, body .top_categories .mensLifestyle h5, body .collection .mensLifestyle h5, body .latest_news .mensLifestyle h5, body .coming_soon .mensLifestyle h5, body .featured .mensLifestyle h5 {
+body .lifestyle .mensLifestyle h5, body .newsletter .mensLifestyle h5, body .top_categories .mensLifestyle h5, body .collection .mensLifestyle h5, body .latest_news .mensLifestyle h5, body .coming_soon .mensLifestyle h5, body .featured .mensLifestyle h5 {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center;
 }
-body .lifestyle .new, body .top_categories .new, body .collection .new, body .latest_news .new, body .coming_soon .new, body .featured .new {
+body .lifestyle .new, body .newsletter .new, body .top_categories .new, body .collection .new, body .latest_news .new, body .coming_soon .new, body .featured .new {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -585,7 +610,7 @@ body .assistent .carousel-inner .carousel-item h2 {
 }
 @media screen and (max-width: 576px) {
   body .assistent .carousel-inner .carousel-item h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 body .assistent .carousel-inner .carousel-item h2 span {
@@ -597,7 +622,149 @@ body .assistent .carousel-inner .carousel-item p {
 }
 @media screen and (max-width: 576px) {
   body .assistent .carousel-inner .carousel-item p {
-    font-size: 15px;
+    font-size: 10px;
+  }
+}
+body .assistent .carousel-control-prev:hover .carusel_arrow span {
+  width: 14px;
+  height: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  display: block;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-prev:hover .carusel_arrow span:first-child {
+  transform: rotate(-45deg);
+  top: 9px;
+  left: 6px;
+}
+body .assistent .carousel-control-prev:hover .carusel_arrow span:nth-child(2) {
+  width: 16px;
+  top: 13px;
+  left: 9px;
+  opacity: 1;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-prev:hover .carusel_arrow span:last-child {
+  transform: rotate(45deg);
+  bottom: 9px;
+  left: 6px;
+}
+body .assistent .carousel-control-prev .carusel_arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #48689a;
+  position: relative;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-prev .carusel_arrow:hover span {
+  width: 14px;
+  height: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  display: block;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-prev .carusel_arrow:hover span:first-child {
+  transform: rotate(-45deg);
+  top: 9px;
+  left: 6px;
+}
+body .assistent .carousel-control-prev .carusel_arrow:hover span:nth-child(2) {
+  width: 16px;
+  top: 13px;
+  left: 9px;
+  opacity: 1;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-prev .carusel_arrow:hover span:last-child {
+  transform: rotate(45deg);
+  bottom: 9px;
+  left: 6px;
+}
+body .assistent .carousel-control-prev .carusel_arrow span {
+  width: 17px;
+  height: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  display: block;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-prev .carusel_arrow span:first-child {
+  transform: rotate(-45deg);
+  top: 8px;
+  left: 6px;
+}
+body .assistent .carousel-control-prev .carusel_arrow span:nth-child(2) {
+  top: 13px;
+  left: 9px;
+  opacity: 0;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-prev .carusel_arrow span:last-child {
+  transform: rotate(45deg);
+  bottom: 8px;
+  left: 6px;
+}
+body .assistent .carousel-control-next:hover .carusel_arrow span {
+  width: 14px;
+  height: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  display: block;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-next:hover .carusel_arrow span:first-child {
+  transform: rotate(45deg);
+  top: 9px;
+  left: 11px;
+}
+body .assistent .carousel-control-next:hover .carusel_arrow span:nth-child(2) {
+  width: 16px;
+  top: 13px;
+  left: 6px;
+  opacity: 1;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-next:hover .carusel_arrow span:last-child {
+  transform: rotate(-45deg);
+  bottom: 9px;
+  left: 11px;
+}
+body .assistent .carousel-control-next .carusel_arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #48689a;
+  position: relative;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-next .carusel_arrow span {
+  width: 17px;
+  height: 4px;
+  background-color: #ffffff;
+  position: absolute;
+  display: block;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-next .carusel_arrow span:first-child {
+  transform: rotate(45deg);
+  top: 8px;
+  left: 8px;
+}
+body .assistent .carousel-control-next .carusel_arrow span:nth-child(2) {
+  top: 13px;
+  left: 6px;
+  opacity: 0;
+  transition: 0.3s;
+}
+body .assistent .carousel-control-next .carusel_arrow span:last-child {
+  transform: rotate(-45deg);
+  bottom: 8px;
+  left: 8px;
+}
+@media screen and (max-width: 1200px) {
+  body .assistent .carousel-control-prev, body .assistent .carousel-control-next {
+    display: none;
   }
 }
 body .featured .grid-container {
@@ -655,6 +822,7 @@ body .coming_soon .mens_collection .mens_collection_hover p {
   letter-spacing: 8px;
   text-transform: uppercase;
   margin-top: 10px;
+  text-align: center;
 }
 body .latest_news h3 {
   font-size: 24px;
@@ -735,6 +903,154 @@ body .top_categories .product_hover {
 body .top_categories .product_hover:hover {
   opacity: 1;
   transition: 0.3s;
+}
+body .newsletter .newsletter_pictures {
+  max-width: 557px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #f1edee;
+  padding: 10px;
+}
+body .newsletter .newsletter_pictures .newsletter_pictures_content {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #ffffff;
+}
+body .newsletter h4 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+body .newsletter p {
+  font-size: 14px;
+  margin: 15px 0 25px;
+  text-align: center;
+}
+body .newsletter form {
+  position: relative;
+}
+body .newsletter form input {
+  width: 350px;
+  padding: 10px;
+  font-size: 12px;
+  outline: none;
+}
+@media screen and (max-width: 576px) {
+  body .newsletter form input {
+    width: 280px;
+  }
+}
+body .newsletter form .arrow {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+body .newsletter form .arrow span {
+  width: 25px;
+  height: 2px;
+  background-color: #15232d;
+  display: block;
+  position: absolute;
+}
+body .newsletter form .arrow span:first-child {
+  width: 10px;
+  transform: rotate(45deg);
+  top: -4px;
+  left: 15px;
+}
+body .newsletter form .arrow span:last-child {
+  width: 10px;
+  transform: rotate(-45deg);
+  top: 4px;
+  left: 15px;
+}
+body footer {
+  font-family: "Roboto Slab", serif;
+  padding: 50px 0 0 0;
+}
+body footer h3 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  color: #48689a;
+}
+body footer p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+}
+body footer h5 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+body footer ul {
+  list-style: none;
+  padding: 0;
+}
+body footer ul a {
+  font-size: 14px;
+  color: #15232d;
+  font-weight: 300;
+  text-decoration: none !important;
+  transition: 0.3s;
+}
+body footer ul a:hover {
+  color: #00cdc6;
+  transition: 0.3s;
+}
+body footer .payment_methods {
+  padding: 20px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+body footer .social_links {
+  width: 350px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 50px 0 25px 0;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media screen and (max-width: 576px) {
+  body footer .social_links {
+    width: auto;
+  }
+}
+body footer .social_links a {
+  font-size: 20px;
+  color: #15232d;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+body footer .social_links a:hover {
+  color: #48689a;
+  transition: 0.3s;
+}
+body .copyright {
+  width: 100%;
+  height: 40px;
+  background-color: #48689a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+body .copyright p {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 0;
+}
+body .copyright p span {
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */
