@@ -1294,71 +1294,15 @@ body .copyright p span {
 .product_gallery .pagination .page-item .page-link {
   border: none;
 }
-
-.error_header {
-  height: 100vh;
-  font-family: "Roboto Slab", serif;
+.product_gallery .shop_list_content {
+  font-size: 14px;
 }
-.error_header .title_error_page {
-  width: 100%;
-  height: calc(100vh - 130px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.product_gallery .shop_list_content h6 {
+  text-transform: uppercase;
 }
-@media screen and (max-width: 998px) {
-  .error_header .title_error_page {
-    height: calc(100vh - 184px);
-  }
-}
-@media screen and (max-width: 768px) {
-  .error_header .title_error_page > img {
-    width: 400px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .error_header .title_error_page > img {
-    width: 60%;
-  }
-}
-.error_header .title_error_page .back_to_home {
-  width: 400px;
-  height: 70px;
-  background-color: transparent;
-  border: 2px solid #3c4852;
-  outline: none;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  color: #3c4852;
-  text-decoration: none;
-  margin-top: 90px;
-  transition: 0.3s;
-}
-.error_header .title_error_page .back_to_home:hover {
-  color: #ffffff;
-  background-color: #48689a;
-  border-color: #48689a;
-  transition: 0.3s;
-}
-@media screen and (max-width: 768px) {
-  .error_header .title_error_page .back_to_home {
-    width: 60%;
-  }
-}
-.error_header .title_error_page .find_us {
-  width: 230px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-top: 105px;
-}
-.error_header .title_error_page .find_us a {
-  color: #3c4852;
+.product_gallery .shop_list_content span {
+  color: #48689a;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */
