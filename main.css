@@ -387,7 +387,7 @@ body header .title_header .carousel-control-prev {
   left: -70px !important;
   opacity: 0;
 }
-body .collection, body .product_gallery .featured, .product_gallery body .featured, body .latest_news, body .coming_soon, body .featured {
+body .collection, body .product_gallery .featured, body .blog_list .featured, .product_gallery body .featured, .blog_list body .featured, body .latest_news, body .coming_soon, body .featured {
   width: 100%;
   padding: 50px 0;
   font-family: "Roboto Slab", serif;
@@ -452,11 +452,11 @@ body .service p {
   font-size: 14px;
   line-height: 30px;
 }
-body .lifestyle, body .product_gallery, body .newsletter, body .top_categories, body .collection, body .product_gallery .featured, .product_gallery body .featured, body .latest_news, body .coming_soon, body .featured {
+body .lifestyle, body .product_gallery, body .blog_list, body .newsletter, body .top_categories, body .collection, body .product_gallery .featured, body .blog_list .featured, .product_gallery body .featured, .blog_list body .featured, body .latest_news, body .coming_soon, body .featured {
   padding: 50px 0;
   font-family: "Roboto Slab", serif;
 }
-body .lifestyle .mensLifestyle, body .product_gallery .mensLifestyle, body .newsletter .mensLifestyle, body .top_categories .mensLifestyle, body .collection .mensLifestyle, body .latest_news .mensLifestyle, body .coming_soon .mensLifestyle, body .featured .mensLifestyle {
+body .lifestyle .mensLifestyle, body .product_gallery .mensLifestyle, body .blog_list .mensLifestyle, body .newsletter .mensLifestyle, body .top_categories .mensLifestyle, body .collection .mensLifestyle, body .latest_news .mensLifestyle, body .coming_soon .mensLifestyle, body .featured .mensLifestyle {
   width: 300px;
   height: 420px;
   border: 4px solid #48689a;
@@ -465,13 +465,13 @@ body .lifestyle .mensLifestyle, body .product_gallery .mensLifestyle, body .news
   justify-content: center;
   flex-direction: column;
 }
-body .lifestyle .mensLifestyle h5, body .product_gallery .mensLifestyle h5, body .newsletter .mensLifestyle h5, body .top_categories .mensLifestyle h5, body .collection .mensLifestyle h5, body .latest_news .mensLifestyle h5, body .coming_soon .mensLifestyle h5, body .featured .mensLifestyle h5 {
+body .lifestyle .mensLifestyle h5, body .product_gallery .mensLifestyle h5, body .blog_list .mensLifestyle h5, body .newsletter .mensLifestyle h5, body .top_categories .mensLifestyle h5, body .collection .mensLifestyle h5, body .latest_news .mensLifestyle h5, body .coming_soon .mensLifestyle h5, body .featured .mensLifestyle h5 {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
 }
-body .lifestyle .new, body .product_gallery .new, body .newsletter .new, body .top_categories .new, body .collection .new, body .latest_news .new, body .coming_soon .new, body .featured .new {
+body .lifestyle .new, body .product_gallery .new, body .blog_list .new, body .newsletter .new, body .top_categories .new, body .collection .new, body .latest_news .new, body .coming_soon .new, body .featured .new {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1119,39 +1119,39 @@ body .copyright p span {
   color: #3c4852;
 }
 
-.product_gallery h5 {
+.product_gallery h5, .blog_list h5 {
   font-size: 24px;
   color: #9aa6b9;
   font-weight: 600;
   text-align: center;
   margin-top: 20px;
 }
-.product_gallery h2 {
+.product_gallery h2, .blog_list h2 {
   font-size: 50px;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 100px;
 }
-.product_gallery h4 {
+.product_gallery h4, .blog_list h4 {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   padding-bottom: 20px;
   border-bottom: 1px solid #f1edee;
 }
-.product_gallery ul {
+.product_gallery ul, .blog_list ul {
   list-style: none;
   padding: 0;
 }
-.product_gallery ul li {
+.product_gallery ul li, .blog_list ul li {
   border-bottom: 1px solid #f1edee;
   padding: 15px 0;
 }
-.product_gallery ul li:last-child {
+.product_gallery ul li:last-child, .blog_list ul li:last-child {
   border: none;
 }
-.product_gallery ul li a {
+.product_gallery ul li a, .blog_list ul li a {
   color: #15232d;
   width: 100%;
   text-decoration: none;
@@ -1160,10 +1160,10 @@ body .copyright p span {
   justify-content: space-between;
   flex-direction: row;
 }
-.product_gallery ul li a:hover {
+.product_gallery ul li a:hover, .blog_list ul li a:hover {
   color: #48689a;
 }
-.product_gallery button {
+.product_gallery button, .blog_list button {
   width: 90px;
   height: 30px;
   font-size: 14px;
@@ -1173,40 +1173,40 @@ body .copyright p span {
   border: 1px solid #15232d;
   transition: 0.3s;
 }
-.product_gallery button:hover {
+.product_gallery button:hover, .blog_list button:hover {
   color: #ffffff;
   background-color: #48689a;
   border-color: #48689a;
   transition: 0.3s;
 }
-.product_gallery .form-check {
+.product_gallery .form-check, .blog_list .form-check {
   padding: 15px 0;
   border-bottom: 1px solid #f1edee;
 }
-.product_gallery .form-check:last-child {
+.product_gallery .form-check:last-child, .blog_list .form-check:last-child {
   border: none;
 }
-.product_gallery .form-check:hover {
+.product_gallery .form-check:hover, .blog_list .form-check:hover {
   color: #48689a;
 }
-.product_gallery .best_sale .denim {
+.product_gallery .best_sale .denim, .blog_list .best_sale .denim {
   border-bottom: 1px solid #f1edee;
   padding: 20px 0;
 }
-.product_gallery .best_sale p {
+.product_gallery .best_sale p, .blog_list .best_sale p {
   font-size: 14px;
   margin-bottom: 5px;
 }
-.product_gallery .best_sale span {
+.product_gallery .best_sale span, .blog_list .best_sale span {
   font-size: 12px;
   margin-top: 10px;
 }
-.product_gallery .keyword button {
+.product_gallery .keyword button, .blog_list .keyword button {
   border: none;
   width: 70px;
   margin: 10px 0;
 }
-.product_gallery .filter {
+.product_gallery .filter, .blog_list .filter {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1214,56 +1214,56 @@ body .copyright p span {
   flex-wrap: wrap;
   border-bottom: 1px solid #f1edee;
 }
-.product_gallery .filter .filter_button {
+.product_gallery .filter .filter_button, .blog_list .filter .filter_button {
   color: #9aa6b9;
   margin-right: 10px;
 }
-.product_gallery .filter .filter_button:hover {
+.product_gallery .filter .filter_button:hover, .blog_list .filter .filter_button:hover {
   color: #48689a;
 }
-.product_gallery .filter ul li {
+.product_gallery .filter ul li, .blog_list .filter ul li {
   border-bottom: none;
 }
-.product_gallery .filter ul li:first-child div {
+.product_gallery .filter ul li:first-child div, .blog_list .filter ul li:first-child div {
   background-color: #f44336;
 }
-.product_gallery .filter ul li:nth-child(2) div {
+.product_gallery .filter ul li:nth-child(2) div, .blog_list .filter ul li:nth-child(2) div {
   background-color: #4caf50;
 }
-.product_gallery .filter ul li:nth-child(3) div {
+.product_gallery .filter ul li:nth-child(3) div, .blog_list .filter ul li:nth-child(3) div {
   background-color: #2196f3;
 }
-.product_gallery .filter ul li:nth-child(4) div {
+.product_gallery .filter ul li:nth-child(4) div, .blog_list .filter ul li:nth-child(4) div {
   background-color: #3f51b5;
 }
-.product_gallery .filter ul li:nth-child(5) div {
+.product_gallery .filter ul li:nth-child(5) div, .blog_list .filter ul li:nth-child(5) div {
   background-color: #ffeb3b;
 }
-.product_gallery .filter ul li:nth-child(6) div {
+.product_gallery .filter ul li:nth-child(6) div, .blog_list .filter ul li:nth-child(6) div {
   background-color: #ff5722;
 }
-.product_gallery .filter ul li:last-child div {
+.product_gallery .filter ul li:last-child div, .blog_list .filter ul li:last-child div {
   background-color: #48689a;
 }
-.product_gallery .filter ul li div {
+.product_gallery .filter ul li div, .blog_list .filter ul li div {
   width: 14px;
   height: 12px;
   margin: 0 5px;
 }
-.product_gallery .filter span {
+.product_gallery .filter span, .blog_list .filter span {
   font-size: 14px;
 }
-.product_gallery .filter .nav-link {
+.product_gallery .filter .nav-link, .blog_list .filter .nav-link {
   color: #15232d;
   font-size: 14px;
 }
-.product_gallery .filter .dropdown-menu {
+.product_gallery .filter .dropdown-menu, .blog_list .filter .dropdown-menu {
   min-width: auto;
 }
-.product_gallery .filter .dropdown-menu .dropdown-item:hover {
+.product_gallery .filter .dropdown-menu .dropdown-item:hover, .blog_list .filter .dropdown-menu .dropdown-item:hover {
   background-color: #00cdc6;
 }
-.product_gallery .featured .grid-container {
+.product_gallery .featured .grid-container, .blog_list .featured .grid-container {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1272,37 +1272,70 @@ body .copyright p span {
   grid-gap: 10px;
 }
 @media screen and (max-width: 998px) {
-  .product_gallery .featured .grid-container {
+  .product_gallery .featured .grid-container, .blog_list .featured .grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "one two" "three four" "five six" " seven eight" "nine ten" "eleven tvelve";
   }
 }
 @media screen and (max-width: 576px) {
-  .product_gallery .featured .grid-container {
+  .product_gallery .featured .grid-container, .blog_list .featured .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "one" "two" "three" "four" "five" "six" " seven" "eight" "nine" "ten" "eleven" "tvelve";
   }
 }
-.product_gallery .pagination {
+
+.pagination {
   border: none;
 }
-.product_gallery .pagination .page-item {
+.pagination .page-item {
   border: none;
 }
-.product_gallery .pagination .page-item .page-link {
+.pagination .page-item .page-link {
   border: none;
 }
-.product_gallery .shop_list_content {
+.pagination .shop_list_content {
   font-size: 14px;
 }
-.product_gallery .shop_list_content h6 {
+.pagination .shop_list_content h6 {
   text-transform: uppercase;
 }
-.product_gallery .shop_list_content span {
+.pagination .shop_list_content span {
   color: #48689a;
   font-size: 18px;
+}
+
+.blog_list form {
+  width: 100%;
+  position: relative;
+}
+.blog_list form input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #f1edee;
+  padding: 10px 20px;
+}
+.blog_list form button {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  border-color: transparent;
+}
+.blog_list .counter {
+  font-size: 12px;
+  color: #a3a3a4;
+}
+.blog_list .data_blog_list {
+  position: relative;
+}
+.blog_list .data_blog_list p {
+  font-size: 12px;
+  text-transform: lowercase;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

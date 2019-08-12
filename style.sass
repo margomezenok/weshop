@@ -1069,12 +1069,12 @@ body
 				grid-template-columns: 1fr 
 				grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr 1fr
 				grid-template-areas: "one" "two" "three" "four" "five" "six" " seven" "eight" "nine" "ten" "eleven" "tvelve"
-	.pagination
+.pagination
+	border: none
+	.page-item
 		border: none
-		.page-item
+		.page-link
 			border: none
-			.page-link
-				border: none
 	.shop_list_content
 		font-size: 14px
 		h6
@@ -1083,6 +1083,35 @@ body
 		span
 			color : $menuColor
 			font-size: 18px
+.blog_list
+	
+	@extend .product_gallery
+	form
+		width: 100%
+		position: relative
+		input
+			width: 100%
+			background-color: transparent
+			outline: none
+			border: 1px solid $blockColor
+			padding: 10px 20px
+		button 
+			width: 30px
+			height: 100%
+			position: absolute
+			top: 0
+			right: 0px
+			border-color: transparent
+	.counter
+		font-size: 12px
+		color: #a3a3a4
+	.data_blog_list
+		position: relative
+		p
+			font-size: 12px
+			text-transform: lowercase
+			font-weight: 500
+
 
 
 
