@@ -213,18 +213,23 @@ body header .navbar .basket .dropdown-menu .close {
   outline: none;
   background-color: transparent;
 }
-body header .navbar .basket .dropdown-menu button {
-  width: 80%;
+body header .navbar .basket .dropdown-menu .cart_link {
+  width: 270px;
   margin: 5px 25px;
   padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   font-size: 14px;
   text-transform: uppercase;
   color: #48689a;
   background-color: #ffffff;
   border: 2px solid #48689a;
+  text-decoration: none;
   transition: 0.3s;
 }
-body header .navbar .basket .dropdown-menu button:hover {
+body header .navbar .basket .dropdown-menu .cart_link:hover {
   background-color: #48689a;
   color: #ffffff;
   transition: 0.3s;
@@ -387,54 +392,54 @@ body header .title_header .carousel-control-prev {
   left: -70px !important;
   opacity: 0;
 }
-body .collection, body .product_gallery .featured, body .blog_list .featured, .product_gallery body .featured, .blog_list body .featured, body .latest_news, body .coming_soon, body .featured {
+body .collection, body .shopping_cart_title, body .product_gallery .featured, body .blog_list .featured, .product_gallery body .featured, .blog_list body .featured, body .latest_news, body .coming_soon, body .featured {
   width: 100%;
   padding: 50px 0;
   font-family: "Roboto Slab", serif;
 }
-body .collection .wrapper, body .latest_news .wrapper, body .coming_soon .wrapper, body .featured .wrapper {
+body .collection .wrapper, body .shopping_cart_title .wrapper, body .latest_news .wrapper, body .coming_soon .wrapper, body .featured .wrapper {
   width: 100%;
 }
-body .collection .wrapper .offer, body .latest_news .wrapper .offer, body .coming_soon .wrapper .offer, body .featured .wrapper .offer {
+body .collection .wrapper .offer, body .shopping_cart_title .wrapper .offer, body .latest_news .wrapper .offer, body .coming_soon .wrapper .offer, body .featured .wrapper .offer {
   border: 5px solid #eeeeee;
   padding: 12px 25px;
   margin: 10px 20px;
 }
-body .collection .wrapper .offer .link, body .latest_news .wrapper .offer .link, body .coming_soon .wrapper .offer .link, body .featured .wrapper .offer .link {
+body .collection .wrapper .offer .link, body .shopping_cart_title .wrapper .offer .link, body .latest_news .wrapper .offer .link, body .coming_soon .wrapper .offer .link, body .featured .wrapper .offer .link {
   border: 5px solid transparent;
   padding: 10px;
 }
-body .collection .wrapper .offer .link:hover, body .latest_news .wrapper .offer .link:hover, body .coming_soon .wrapper .offer .link:hover, body .featured .wrapper .offer .link:hover {
+body .collection .wrapper .offer .link:hover, body .shopping_cart_title .wrapper .offer .link:hover, body .latest_news .wrapper .offer .link:hover, body .coming_soon .wrapper .offer .link:hover, body .featured .wrapper .offer .link:hover {
   border: 5px solid #48689a;
 }
-body .collection .wrapper .offer h5, body .latest_news .wrapper .offer h5, body .coming_soon .wrapper .offer h5, body .featured .wrapper .offer h5 {
+body .collection .wrapper .offer h5, body .shopping_cart_title .wrapper .offer h5, body .latest_news .wrapper .offer h5, body .coming_soon .wrapper .offer h5, body .featured .wrapper .offer h5 {
   font-size: 24px;
   font-weight: 800;
 }
-body .collection .wrapper .offer h4, body .latest_news .wrapper .offer h4, body .coming_soon .wrapper .offer h4, body .featured .wrapper .offer h4 {
+body .collection .wrapper .offer h4, body .shopping_cart_title .wrapper .offer h4, body .latest_news .wrapper .offer h4, body .coming_soon .wrapper .offer h4, body .featured .wrapper .offer h4 {
   font-size: 37px;
   color: #48689a;
   font-weight: 800;
 }
 @media screen and (max-width: 576px) {
-  body .collection .wrapper .offer h4, body .latest_news .wrapper .offer h4, body .coming_soon .wrapper .offer h4, body .featured .wrapper .offer h4 {
+  body .collection .wrapper .offer h4, body .shopping_cart_title .wrapper .offer h4, body .latest_news .wrapper .offer h4, body .coming_soon .wrapper .offer h4, body .featured .wrapper .offer h4 {
     font-size: 30px;
   }
 }
-body .collection .wrapper .offer p, body .latest_news .wrapper .offer p, body .coming_soon .wrapper .offer p, body .featured .wrapper .offer p {
+body .collection .wrapper .offer p, body .shopping_cart_title .wrapper .offer p, body .latest_news .wrapper .offer p, body .coming_soon .wrapper .offer p, body .featured .wrapper .offer p {
   font-size: 24px;
   font-weight: 800;
   text-transform: uppercase;
 }
-body .collection .wrapper .offer p span, body .latest_news .wrapper .offer p span, body .coming_soon .wrapper .offer p span, body .featured .wrapper .offer p span {
+body .collection .wrapper .offer p span, body .shopping_cart_title .wrapper .offer p span, body .latest_news .wrapper .offer p span, body .coming_soon .wrapper .offer p span, body .featured .wrapper .offer p span {
   color: #48689a;
 }
-body .collection .wrapper .offer a, body .latest_news .wrapper .offer a, body .coming_soon .wrapper .offer a, body .featured .wrapper .offer a {
+body .collection .wrapper .offer a, body .shopping_cart_title .wrapper .offer a, body .latest_news .wrapper .offer a, body .coming_soon .wrapper .offer a, body .featured .wrapper .offer a {
   color: #000000;
   text-decoration: none;
   transition: 0.3s;
 }
-body .collection .wrapper .offer a:hover, body .latest_news .wrapper .offer a:hover, body .coming_soon .wrapper .offer a:hover, body .featured .wrapper .offer a:hover {
+body .collection .wrapper .offer a:hover, body .shopping_cart_title .wrapper .offer a:hover, body .latest_news .wrapper .offer a:hover, body .coming_soon .wrapper .offer a:hover, body .featured .wrapper .offer a:hover {
   color: #48689a;
   transition: 0.3s;
 }
@@ -452,11 +457,11 @@ body .service p {
   font-size: 14px;
   line-height: 30px;
 }
-body .lifestyle, body .product_gallery, body .blog_list, body .newsletter, body .top_categories, body .collection, body .product_gallery .featured, body .blog_list .featured, .product_gallery body .featured, .blog_list body .featured, body .latest_news, body .coming_soon, body .featured {
+body .lifestyle, body .product_gallery, body .blog_list, body .newsletter, body .top_categories, body .collection, body .shopping_cart_title, body .product_gallery .featured, body .blog_list .featured, .product_gallery body .featured, .blog_list body .featured, body .latest_news, body .coming_soon, body .featured {
   padding: 50px 0;
   font-family: "Roboto Slab", serif;
 }
-body .lifestyle .mensLifestyle, body .product_gallery .mensLifestyle, body .blog_list .mensLifestyle, body .newsletter .mensLifestyle, body .top_categories .mensLifestyle, body .collection .mensLifestyle, body .latest_news .mensLifestyle, body .coming_soon .mensLifestyle, body .featured .mensLifestyle {
+body .lifestyle .mensLifestyle, body .product_gallery .mensLifestyle, body .blog_list .mensLifestyle, body .newsletter .mensLifestyle, body .top_categories .mensLifestyle, body .collection .mensLifestyle, body .shopping_cart_title .mensLifestyle, body .latest_news .mensLifestyle, body .coming_soon .mensLifestyle, body .featured .mensLifestyle {
   width: 300px;
   height: 420px;
   border: 4px solid #48689a;
@@ -465,13 +470,13 @@ body .lifestyle .mensLifestyle, body .product_gallery .mensLifestyle, body .blog
   justify-content: center;
   flex-direction: column;
 }
-body .lifestyle .mensLifestyle h5, body .product_gallery .mensLifestyle h5, body .blog_list .mensLifestyle h5, body .newsletter .mensLifestyle h5, body .top_categories .mensLifestyle h5, body .collection .mensLifestyle h5, body .latest_news .mensLifestyle h5, body .coming_soon .mensLifestyle h5, body .featured .mensLifestyle h5 {
+body .lifestyle .mensLifestyle h5, body .product_gallery .mensLifestyle h5, body .blog_list .mensLifestyle h5, body .newsletter .mensLifestyle h5, body .top_categories .mensLifestyle h5, body .collection .mensLifestyle h5, body .shopping_cart_title .mensLifestyle h5, body .latest_news .mensLifestyle h5, body .coming_soon .mensLifestyle h5, body .featured .mensLifestyle h5 {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
 }
-body .lifestyle .new, body .product_gallery .new, body .blog_list .new, body .newsletter .new, body .top_categories .new, body .collection .new, body .latest_news .new, body .coming_soon .new, body .featured .new {
+body .lifestyle .new, body .product_gallery .new, body .blog_list .new, body .newsletter .new, body .top_categories .new, body .collection .new, body .shopping_cart_title .new, body .latest_news .new, body .coming_soon .new, body .featured .new {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,23 +492,23 @@ body .lifestyle .new, body .product_gallery .new, body .blog_list .new, body .ne
   font-size: 14px;
   font-weight: 300;
 }
-body .collection .navbar .navbar-brand, body .latest_news .navbar .navbar-brand, body .coming_soon .navbar .navbar-brand, body .featured .navbar .navbar-brand {
+body .collection .navbar .navbar-brand, body .shopping_cart_title .navbar .navbar-brand, body .latest_news .navbar .navbar-brand, body .coming_soon .navbar .navbar-brand, body .featured .navbar .navbar-brand {
   color: #15232d;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
 }
-body .collection .navbar .navbar-nav .nav-link, body .latest_news .navbar .navbar-nav .nav-link, body .coming_soon .navbar .navbar-nav .nav-link, body .featured .navbar .navbar-nav .nav-link {
+body .collection .navbar .navbar-nav .nav-link, body .shopping_cart_title .navbar .navbar-nav .nav-link, body .latest_news .navbar .navbar-nav .nav-link, body .coming_soon .navbar .navbar-nav .nav-link, body .featured .navbar .navbar-nav .nav-link {
   color: #15232d;
   text-transform: uppercase;
   font-size: 14px;
   transition: 0.3s;
 }
-body .collection .navbar .navbar-nav .nav-link:hover, body .latest_news .navbar .navbar-nav .nav-link:hover, body .coming_soon .navbar .navbar-nav .nav-link:hover, body .featured .navbar .navbar-nav .nav-link:hover {
+body .collection .navbar .navbar-nav .nav-link:hover, body .shopping_cart_title .navbar .navbar-nav .nav-link:hover, body .latest_news .navbar .navbar-nav .nav-link:hover, body .coming_soon .navbar .navbar-nav .nav-link:hover, body .featured .navbar .navbar-nav .nav-link:hover {
   color: #48689a;
   transition: 0.3s;
 }
-body .collection .grid-container, body .latest_news .grid-container, body .coming_soon .grid-container, body .featured .grid-container {
+body .collection .grid-container, body .shopping_cart_title .grid-container, body .latest_news .grid-container, body .coming_soon .grid-container, body .featured .grid-container {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -512,76 +517,76 @@ body .collection .grid-container, body .latest_news .grid-container, body .comin
   grid-gap: 10px;
 }
 @media screen and (max-width: 998px) {
-  body .collection .grid-container, body .latest_news .grid-container, body .coming_soon .grid-container, body .featured .grid-container {
+  body .collection .grid-container, body .shopping_cart_title .grid-container, body .latest_news .grid-container, body .coming_soon .grid-container, body .featured .grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "one two" "three four" "five six" "seven eight";
   }
 }
 @media screen and (max-width: 576px) {
-  body .collection .grid-container, body .latest_news .grid-container, body .coming_soon .grid-container, body .featured .grid-container {
+  body .collection .grid-container, body .shopping_cart_title .grid-container, body .latest_news .grid-container, body .coming_soon .grid-container, body .featured .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
   }
 }
-body .collection .grid-container .galery, body .latest_news .grid-container .galery, body .coming_soon .grid-container .galery, body .featured .grid-container .galery {
+body .collection .grid-container .galery, body .shopping_cart_title .grid-container .galery, body .latest_news .grid-container .galery, body .coming_soon .grid-container .galery, body .featured .grid-container .galery {
   background-image: url(img/collection_img.jpg);
   height: 340px;
   position: relative;
 }
-body .collection .grid-container .one, body .latest_news .grid-container .one, body .coming_soon .grid-container .one, body .featured .grid-container .one {
+body .collection .grid-container .one, body .shopping_cart_title .grid-container .one, body .latest_news .grid-container .one, body .coming_soon .grid-container .one, body .featured .grid-container .one {
   grid-area: one;
 }
-body .collection .grid-container .two, body .latest_news .grid-container .two, body .coming_soon .grid-container .two, body .featured .grid-container .two {
+body .collection .grid-container .two, body .shopping_cart_title .grid-container .two, body .latest_news .grid-container .two, body .coming_soon .grid-container .two, body .featured .grid-container .two {
   grid-area: two;
 }
-body .collection .grid-container .five, body .latest_news .grid-container .five, body .coming_soon .grid-container .five, body .featured .grid-container .five {
+body .collection .grid-container .five, body .shopping_cart_title .grid-container .five, body .latest_news .grid-container .five, body .coming_soon .grid-container .five, body .featured .grid-container .five {
   grid-area: five;
 }
-body .collection .grid-container .six, body .latest_news .grid-container .six, body .coming_soon .grid-container .six, body .featured .grid-container .six {
+body .collection .grid-container .six, body .shopping_cart_title .grid-container .six, body .latest_news .grid-container .six, body .coming_soon .grid-container .six, body .featured .grid-container .six {
   grid-area: six;
 }
-body .collection .grid-container .seven, body .latest_news .grid-container .seven, body .coming_soon .grid-container .seven, body .featured .grid-container .seven {
+body .collection .grid-container .seven, body .shopping_cart_title .grid-container .seven, body .latest_news .grid-container .seven, body .coming_soon .grid-container .seven, body .featured .grid-container .seven {
   grid-area: seven;
 }
-body .collection .grid-container .four, body .latest_news .grid-container .four, body .coming_soon .grid-container .four, body .featured .grid-container .four {
+body .collection .grid-container .four, body .shopping_cart_title .grid-container .four, body .latest_news .grid-container .four, body .coming_soon .grid-container .four, body .featured .grid-container .four {
   grid-area: four;
 }
-body .collection .grid-container .eight, body .latest_news .grid-container .eight, body .coming_soon .grid-container .eight, body .featured .grid-container .eight {
+body .collection .grid-container .eight, body .shopping_cart_title .grid-container .eight, body .latest_news .grid-container .eight, body .coming_soon .grid-container .eight, body .featured .grid-container .eight {
   grid-area: eight;
 }
-body .collection .grid-container .three, body .latest_news .grid-container .three, body .coming_soon .grid-container .three, body .featured .grid-container .three {
+body .collection .grid-container .three, body .shopping_cart_title .grid-container .three, body .latest_news .grid-container .three, body .coming_soon .grid-container .three, body .featured .grid-container .three {
   grid-area: three;
 }
-body .collection .grid-container img, body .latest_news .grid-container img, body .coming_soon .grid-container img, body .featured .grid-container img {
+body .collection .grid-container img, body .shopping_cart_title .grid-container img, body .latest_news .grid-container img, body .coming_soon .grid-container img, body .featured .grid-container img {
   position: absolute;
   right: -1px;
   bottom: 30px;
 }
-body .collection .grid-container img:nth-child(2), body .latest_news .grid-container img:nth-child(2), body .coming_soon .grid-container img:nth-child(2), body .featured .grid-container img:nth-child(2) {
+body .collection .grid-container img:nth-child(2), body .shopping_cart_title .grid-container img:nth-child(2), body .latest_news .grid-container img:nth-child(2), body .coming_soon .grid-container img:nth-child(2), body .featured .grid-container img:nth-child(2) {
   right: -2px;
   bottom: 80px;
 }
-body .collection .grid-container img:nth-child(3), body .latest_news .grid-container img:nth-child(3), body .coming_soon .grid-container img:nth-child(3), body .featured .grid-container img:nth-child(3) {
+body .collection .grid-container img:nth-child(3), body .shopping_cart_title .grid-container img:nth-child(3), body .latest_news .grid-container img:nth-child(3), body .coming_soon .grid-container img:nth-child(3), body .featured .grid-container img:nth-child(3) {
   right: -1px;
   bottom: 130px;
 }
-body .collection .grid-container img:last-child, body .latest_news .grid-container img:last-child, body .coming_soon .grid-container img:last-child, body .featured .grid-container img:last-child {
+body .collection .grid-container img:last-child, body .shopping_cart_title .grid-container img:last-child, body .latest_news .grid-container img:last-child, body .coming_soon .grid-container img:last-child, body .featured .grid-container img:last-child {
   right: -1px;
   bottom: 30px;
 }
-body .collection .grid-container .grid_hover, body .latest_news .grid-container .grid_hover, body .coming_soon .grid-container .grid_hover, body .featured .grid-container .grid_hover {
+body .collection .grid-container .grid_hover, body .shopping_cart_title .grid-container .grid_hover, body .latest_news .grid-container .grid_hover, body .coming_soon .grid-container .grid_hover, body .featured .grid-container .grid_hover {
   width: 100%;
   height: 100%;
   opacity: 0;
   transition: 0.3s;
 }
-body .collection .grid-container .grid_hover:hover, body .latest_news .grid-container .grid_hover:hover, body .coming_soon .grid-container .grid_hover:hover, body .featured .grid-container .grid_hover:hover {
+body .collection .grid-container .grid_hover:hover, body .shopping_cart_title .grid-container .grid_hover:hover, body .latest_news .grid-container .grid_hover:hover, body .coming_soon .grid-container .grid_hover:hover, body .featured .grid-container .grid_hover:hover {
   opacity: 1;
   transition: 0.3s;
 }
-body .collection .grid-container .grid_hover .priсe, body .latest_news .grid-container .grid_hover .priсe, body .coming_soon .grid-container .grid_hover .priсe, body .featured .grid-container .grid_hover .priсe {
+body .collection .grid-container .grid_hover .priсe, body .shopping_cart_title .grid-container .grid_hover .priсe, body .latest_news .grid-container .grid_hover .priсe, body .coming_soon .grid-container .grid_hover .priсe, body .featured .grid-container .grid_hover .priсe {
   width: 53px;
   height: 37px;
   background-color: #48689a;
@@ -1336,6 +1341,128 @@ body .copyright p span {
   font-size: 12px;
   text-transform: lowercase;
   font-weight: 500;
+}
+
+.shopping_cart {
+  font-family: "Roboto Slab", serif;
+  width: 100%;
+  height: 460px;
+  background-color: #81888d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.shopping_cart h4 {
+  font-size: 24px;
+  text-align: center;
+}
+.shopping_cart h2 {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.shopping_cart_title {
+  font-size: 14px;
+}
+.shopping_cart_title span {
+  color: #48689a;
+  font-size: 18px;
+}
+.shopping_cart_title form input {
+  border: 1px solid #f1edee;
+  outline: none;
+  padding: 10px;
+}
+.shopping_cart_title h6 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 35px 0;
+}
+.shopping_cart_title .cart_btn {
+  width: 250px;
+  height: 40px;
+  margin: 20px 0;
+  background-color: transparent;
+  border: 1px solid #f1edee;
+  text-transform: uppercase;
+}
+.shopping_cart_title .cart_btn:hover {
+  color: #ffffff;
+  background-color: #48689a;
+  border-color: #48689a;
+  transition: 0.3s;
+}
+.shopping_cart_title textarea {
+  width: 100%;
+  height: 170px;
+  border: 1px solid #f1edee;
+  padding: 15px;
+  color: #a3a3a4;
+}
+.shopping_cart_title table thead {
+  background-color: #48689a;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+.shopping_cart_title table thead th {
+  font-weight: 300;
+}
+.shopping_cart_title table tr {
+  border-bottom: 1px solid #f1edee;
+}
+.shopping_cart_title table tr td {
+  vertical-align: middle;
+}
+.shopping_cart_title table tr td .close {
+  font-size: 16px;
+}
+.shopping_cart_title ul {
+  list-style: none;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+}
+@media screen and (max-width: 576px) {
+  .shopping_cart_title ul {
+    width: 280px;
+  }
+}
+.shopping_cart_title ul li {
+  width: 100%;
+  padding: 20px 30px;
+  border-bottom: 1px solid #f1edee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.shopping_cart_title ul li span {
+  font-size: 14px;
+  color: #15232d;
+}
+.shopping_cart_title ul button {
+  width: 100%;
+  height: 50px;
+  margin: 8px auto;
+  background-color: transparent;
+  border: 1px solid #15232d;
+  font-weight: 500;
+  transition: 0.3s;
+}
+@media screen and (max-width: 576px) {
+  .shopping_cart_title ul button {
+    width: 250px;
+  }
+}
+.shopping_cart_title ul button:hover {
+  color: #ffffff;
+  background-color: #48689a;
+  border-color: #48689a;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=main.css.map */
