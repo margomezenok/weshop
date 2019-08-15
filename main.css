@@ -829,6 +829,19 @@ body .coming_soon .mens_collection .mens_collection_hover p {
   margin-top: 10px;
   text-align: center;
 }
+body .latest_news h5 {
+  color: #9aa6b9;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+body .latest_news h2 {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 100px;
+}
 body .latest_news h3 {
   font-size: 24px;
   font-weight: 700;
@@ -1495,11 +1508,6 @@ body .copyright p span {
 }
 .blog_details textarea {
   border: 1px solid #f1edee;
-}
-.blog_details .weshop_btn {
-  width: 200px;
-  height: 40px;
-  background-color: #48689a;
 }
 
 .product_details span {

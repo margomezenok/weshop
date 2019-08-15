@@ -73,9 +73,7 @@ $blockColor: #f1edee
 	margin: 12px 0 25px 0
 body
 	font-family: $fontRoboto
-
-
-	header		
+	header
 		.heading
 			background-color:  $menuColor
 		.subnav
@@ -90,7 +88,6 @@ body
 				@media screen and (max-width:998px)
 					width: 100%
 					justify-content: space-between
-
 			.header_form
 				margin: 0 30px 0 30px
 				position: relative
@@ -124,14 +121,12 @@ body
 				list-style: none
 				@media screen and (max-width:998px)
 					width: 100%
-
 				li
 					a
 						color: #eeeeee
 					.dropdown-item
 						&:hover
 							background-color: $logoColor
-
 			.btn_sabnav
 				background-color: transparent
 				border: none
@@ -140,13 +135,12 @@ body
 				padding: 0 20px
 				outline: none
 		.navbar
-
 			.logo
 				width: 157px
 				height:48px
 				box-sizing: border-box
 				border: 2px solid $logoColor
-				text-decoration: none				
+				text-decoration: none
 				font-size: 40px
 				+flex()
 				font-family: $fontOswald
@@ -162,15 +156,12 @@ body
 				+flex()
 				@media screen and (max-width:998px)
 					display: none
-				
-
 				.dropdown-menu
 					left:-200px
 					box-shadow: 0 0 10px  rgba(0,0,0,0.5)
 					font-size: 14px
 					font-family: $fontRoboto
-
-					p	
+					p
 						margin: 0 10px
 					span
 						color: $menuColor
@@ -194,16 +185,13 @@ body
 							background-color: $menuColor
 							color: $colorWhite
 							transition: 0.3s
-
 				.circle
 					width: 39px
 					height: 39px
-					+flex()					
+					+flex()
 					border: 1px solid $colorWhite
 					border-radius: 50%
 					position: relative
-
-
 				.quantity
 					width: 17px
 					height: 17px
@@ -214,7 +202,6 @@ body
 					position: absolute
 					top: -6px
 					right: -4px
-				
 				span
 					color: #eeeeee
 					font-size: 14px
@@ -225,8 +212,7 @@ body
 					font-family: $fontRoboto
 				i
 					font-size: 10px
-
-				.dropdown_menu					
+				.dropdown_menu
 					display: none
 					background-color: $colorWhite
 					box-shadow: 0 0 10px  rgba(0,0,0,0.5)
@@ -243,8 +229,7 @@ body
 					ul
 						padding: 10px
 						li
-							list-style: none							
-
+							list-style: none
 							a
 								color: #3c4852
 								text-decoration: none
@@ -262,7 +247,6 @@ body
 							font-family: $fontRoboto
 							padding-bottom: 15px
 							border-bottom: 1px solid rgb(238, 238, 238)
-
 				img
 					display: block
 					position: relative
@@ -274,17 +258,14 @@ body
 					color: #48689a
 					top: 55px
 					left: 30px
-				
-
 				.line
 						width: 96px
 						height: 2px
-						background-color: #48689a	
+						background-color: #48689a
 						position: absolute
 						&:first-of-type
 							top: 90px
 							left: 32px
-
 						&:last-of-type
 							width: 60px
 							top: 99px
@@ -296,8 +277,6 @@ body
 			font-family: $fontRoboto
 			@media screen and (max-width:992px)
 				text-align: center
-
-
 			h1
 				font-size: 50px
 				font-weight: 700
@@ -316,16 +295,12 @@ body
 			.control
 				@media screen and (max-width:992px)
 					display: none
-
 			.carousel-control-next
 				right: -70px !important
 				opacity: 0
-
 			.carousel-control-prev
 				left: -70px !important
 				opacity: 0
-
-
 
 	.collection
 		width: 100%
@@ -333,7 +308,7 @@ body
 		font-family: $fontRoboto
 
 		.wrapper
-			width: 100%			
+			width: 100%
 			.offer
 				border: 5px solid #eeeeee
 				padding: 12px 25px
@@ -342,10 +317,8 @@ body
 				.link
 					border: 5px solid transparent
 					padding: 10px
-
 					&:hover
 						border: 5px solid $menuColor
-
 				h5
 					font-size: 24px
 					font-weight: 800
@@ -404,7 +377,7 @@ body
 			border-radius: 50%
 			background-color: $menuColor
 			color: $colorWhite
-			font-size: 14px			
+			font-size: 14px
 			font-weight: 300
 	.collection
 		@extend .lifestyle
@@ -414,7 +387,7 @@ body
 				text-transform: uppercase
 				font-size: 24px
 				font-weight: 700
-			.navbar-nav				
+			.navbar-nav
 				.nav-link
 					color: $aColor
 					text-transform: uppercase
@@ -423,10 +396,8 @@ body
 					&:hover
 						color: $menuColor
 						transition: 0.3s
-
-
 		.grid-container
-			width: 100%			
+			width: 100%
 			display: grid
 			grid-template-columns: 1fr 1fr 1fr 1fr
 			grid-template-rows: 1fr 1fr
@@ -481,10 +452,10 @@ body
 					bottom: 130px
 				&:last-child
 					right: -1px
-					bottom: 30px	
+					bottom: 30px
 			.grid_hover
 				width: 100%
-				height: 100%				
+				height: 100%
 				opacity: 0
 				transition: 0.3s
 				&:hover
@@ -545,7 +516,7 @@ body
 						&:last-child
 							transform: rotate(45deg)
 							bottom: 9px
-							left: 6px						
+							left: 6px
 			.carusel_arrow
 				width: 30px
 				height: 30px
@@ -575,7 +546,7 @@ body
 						&:last-child
 							transform: rotate(45deg)
 							bottom: 9px
-							left: 6px										
+							left: 6px
 
 				span
 					width: 17px
@@ -621,15 +592,13 @@ body
 						&:last-child
 							transform: rotate(-45deg)
 							bottom: 9px
-							left: 11px								
+							left: 11px
 			.carusel_arrow
 				width: 30px
 				height: 30px
 				background-color: $menuColor
 				position: relative
 				transition: 0.3s
-											
-
 				span
 					width: 17px
 					height: 4px
@@ -651,7 +620,7 @@ body
 						bottom: 8px
 						left: 8px
 
-		.carousel-control-prev,	.carousel-control-next		
+		.carousel-control-prev,	.carousel-control-next
 			@media screen and (max-width:1200px)
 				display: none
 				
@@ -659,7 +628,7 @@ body
 	.featured
 		@extend .collection
 		.grid-container
-			width: 100%			
+			width: 100%
 			display: grid
 			grid-template-columns: 1fr 1fr 1fr 1fr
 			grid-template-rows: 1fr 
@@ -679,7 +648,7 @@ body
 			width: 550px
 			height: 350px
 			+flex()
-			background-color: #f2f1ed				
+			background-color: #f2f1ed
 			.mens_collection_hover
 				width: 100%
 				height: 100%
@@ -704,6 +673,17 @@ body
 					text-align: center
 	.latest_news
 		@extend .collection
+		h5
+			color: #9aa6b9
+			font-size: 24px
+			font-weight: 600
+			text-align: center
+			margin-top: 20px
+		h2
+			font-size: 50px
+			font-weight: 600
+			text-align: center
+			margin-bottom: 100px
 		h3
 			font-size: 24px
 			font-weight: 700
@@ -714,7 +694,7 @@ body
 			text-transform: uppercase
 			font-weight: 600
 		.social_links
-			font-size: 14px			
+			font-size: 14px
 		.data
 			width: 44px
 			height: 44px
@@ -769,7 +749,7 @@ body
 			transition: 0.3s
 			&:hover
 				opacity: 1
-				transition: 0.3s	
+				transition: 0.3s
 	.newsletter
 		@extend .lifestyle
 		.newsletter_pictures
@@ -777,7 +757,7 @@ body
 			height: 300px
 			+flex()
 			background-color: $blockColor
-			padding: 10px			
+			padding: 10px
 			.newsletter_pictures_content
 				width: 100%
 				height: 100%
@@ -864,7 +844,7 @@ body
 			+flex()
 			@media screen and (max-width:576px)
 				width: auto
-			a					
+			a
 				font-size: 20px
 				color: $aColor
 				text-decoration: none
@@ -895,7 +875,7 @@ body
 		height: calc(100vh - 130px)
 		+flex($direction: column)
 		@media screen and (max-width: 998px)
-			height: calc(100vh - 184px)		
+			height: calc(100vh - 184px)
 		>img
 			@media screen and (max-width: 768px)
 				width: 400px
@@ -1017,7 +997,7 @@ body
 
 				&:first-child
 					div
-						background-color: #f44336							
+						background-color: #f44336
 				&:nth-child(2)
 					div
 						background-color: #4caf50
@@ -1037,7 +1017,7 @@ body
 					div
 						background-color: #48689a
 
-				div					
+				div
 					width: 14px
 					height: 12px 
 					margin: 0 5px
@@ -1228,10 +1208,7 @@ body
 			color: $menuColor
 	textarea
 		border: 1px solid $blockColor
-	.weshop_btn
-		width: 200px
-		height: 40px
-		background-color: $menuColor
+	
 .product_details
 	span
 		font-size: 40px
@@ -1352,8 +1329,7 @@ body
 				font-weight: 600
 				margin-top: 20px
 
-			
-			
+
 
 
 
