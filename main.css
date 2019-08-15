@@ -1168,7 +1168,7 @@ body .copyright p span {
 .product_gallery ul li a:hover, .blog_list ul li a:hover, .blog_details ul li a:hover {
   color: #48689a;
 }
-.product_gallery button, .blog_list button, .blog_details button {
+.product_gallery .keyword_button, .blog_list .keyword_button, .blog_details .keyword_button {
   width: 90px;
   height: 30px;
   font-size: 14px;
@@ -1178,7 +1178,7 @@ body .copyright p span {
   border: 1px solid #15232d;
   transition: 0.3s;
 }
-.product_gallery button:hover, .blog_list button:hover, .blog_details button:hover {
+.product_gallery .keyword_button:hover, .blog_list .keyword_button:hover, .blog_details .keyword_button:hover {
   color: #ffffff;
   background-color: #48689a;
   border-color: #48689a;
@@ -1500,6 +1500,148 @@ body .copyright p span {
   width: 200px;
   height: 40px;
   background-color: #48689a;
+}
+
+.product_details span {
+  font-size: 40px;
+  font-weight: 600;
+  color: #48689a;
+}
+.product_details .product_details_title a {
+  color: #15232d;
+  text-decoration: none;
+  border-left: 2px solid #9aa6b9;
+}
+.product_details .product_details_title a:hover {
+  color: #48689a;
+}
+.product_details .product_details_title p {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 30px 0;
+}
+.product_details .quantity {
+  width: 180px;
+}
+.product_details .quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+  border: 1px solid #eeeeee;
+  color: #a3a3a4;
+  font-size: 16px;
+  font-weight: 600;
+}
+.product_details .quantity button[class*=btn] {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+  color: #a3a3a4;
+  font-size: 16px;
+  background-color: transparent;
+  transition: 0.3s;
+}
+.product_details .quantity button[class*=btn]:hover {
+  background-color: #48689a;
+  transition: 0.3s;
+}
+.product_details .quantity button[class*=btn] button:focus,
+.product_details .quantity button[class*=btn] input:focus {
+  outline: 0;
+}
+.product_details .form-control {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #eeeeee;
+  color: #a3a3a4;
+}
+.product_details .product_details_arrow {
+  width: 50px;
+  height: 50px;
+  color: #48689a;
+  border: 1px solid #48689a;
+  font-size: 18px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transition: 0.3s;
+}
+.product_details .product_details_arrow:hover {
+  background-color: #48689a;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.product_details .share .share_line {
+  width: 60px;
+  height: 1px;
+  background-color: #48689a;
+}
+.product_details .share a {
+  color: #15232d;
+  margin-right: 10px;
+}
+
+.descriptions {
+  font-family: "Roboto Slab", serif;
+  border-bottom: 1px solid #eeeeee;
+  padding: 70px 0;
+}
+.descriptions .description_header_container {
+  background-color: #48689a;
+  width: 100%;
+}
+.descriptions ul {
+  max-width: 800px;
+  overflow: hidden;
+}
+.descriptions ul li {
+  position: relative;
+}
+.descriptions ul li .nav-link {
+  color: #ffffff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.descriptions ul li .nav-link::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translateX(-20px) rotate(45deg);
+  top: 72px;
+  left: 50%;
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .descriptions ul li .nav-link::after {
+    display: none;
+  }
+}
+.descriptions ul li .nav-link.active {
+  background-color: #48689a;
+}
+.descriptions ul li .nav-link.active::after {
+  opacity: 1;
+}
+.descriptions .tab-content .tab-pane {
+  width: 800px;
+}
+.descriptions .tab-content .tab-pane label {
+  color: #48689a;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
