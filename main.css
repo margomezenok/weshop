@@ -1652,4 +1652,57 @@ body .copyright p span {
   margin-top: 20px;
 }
 
+.check_out .check_out_order {
+  color: #ffffff;
+  background-color: #48689a;
+  width: 350px;
+  padding: 50px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media screen and (max-width: 576px) {
+  .check_out .check_out_order {
+    width: 100%;
+  }
+}
+.check_out .check_out_order .angle {
+  width: 30px;
+  height: 30px;
+  background-color: #eeeeee;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -16px;
+  right: -16px;
+}
+.check_out .check_out_order ul {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.check_out .check_out_order ul li span {
+  color: #ffffff;
+}
+.check_out .check_out_order .checout_btn {
+  background-color: #ffffff;
+  color: #48689a;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  transition: 0.3s;
+  padding: 15px 30px;
+}
+.check_out .check_out_order .checout_btn:hover {
+  background-color: #48689a;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.check_out .form-check p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
 /*# sourceMappingURL=main.css.map */

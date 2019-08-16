@@ -1328,7 +1328,54 @@ body
 				color: $menuColor
 				font-weight: 600
 				margin-top: 20px
+.check_out
 
+
+	.check_out_order
+		color: $colorWhite
+		background-color: $menuColor
+		width: 350px
+		padding: 50px 40px
+		+flex($direction: column)
+		position: relative
+		overflow: hidden
+		margin: 0 auto
+		@media screen and (max-width: 576px)
+			width: 100%
+		.angle
+			width: 30px
+			height: 30px 
+			background-color: #eeeeee
+			position: absolute
+			transform: rotate(45deg)
+			top: -16px
+			right: -16px
+
+
+		ul
+			width: 100%
+			margin-bottom: 30px
+			
+			li
+				span
+					color: $colorWhite
+		.checout_btn
+			background-color: $colorWhite
+			color: $menuColor
+			text-transform: uppercase
+			font-weight: 600
+			border: 2px solid $colorWhite
+			transition: 0.3s
+			padding: 15px 30px
+
+			&:hover
+				background-color: $menuColor
+				color: $colorWhite
+				transition: 0.3s
+	.form-check
+		p
+			font-size: 12px 
+			font-weight: 300
 
 
 
