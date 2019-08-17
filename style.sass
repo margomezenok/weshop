@@ -1056,14 +1056,14 @@ body
 		border: none
 		.page-link
 			border: none
-	.shop_list_content
-		font-size: 14px
-		h6
-			
-			text-transform: uppercase
-		span
-			color : $menuColor
-			font-size: 18px
+.shop_list_content
+	font-size: 14px
+	h6
+		text-transform: uppercase
+	span
+		color : $menuColor
+		font-size: 18px
+
 .blog_list
 	
 	@extend .product_gallery
@@ -1083,6 +1083,7 @@ body
 			top: 0
 			right: 0px
 			border-color: transparent
+			background-color: transparent
 	.counter
 		font-size: 12px
 		color: #a3a3a4
@@ -1193,6 +1194,8 @@ body
 	p
 		font-weight: 300
 		line-height: 25px
+	.s_btn
+		background-color: transparent
 	.p_line
 		border-left: 4px solid $menuColor
 		font-weight: 400
@@ -1329,8 +1332,6 @@ body
 				font-weight: 600
 				margin-top: 20px
 .check_out
-
-
 	.check_out_order
 		color: $colorWhite
 		background-color: $menuColor
@@ -1350,12 +1351,9 @@ body
 			transform: rotate(45deg)
 			top: -16px
 			right: -16px
-
-
 		ul
 			width: 100%
 			margin-bottom: 30px
-			
 			li
 				span
 					color: $colorWhite
@@ -1367,7 +1365,6 @@ body
 			border: 2px solid $colorWhite
 			transition: 0.3s
 			padding: 15px 30px
-
 			&:hover
 				background-color: $menuColor
 				color: $colorWhite
@@ -1377,17 +1374,72 @@ body
 			font-size: 12px 
 			font-weight: 300
 
+.rating
+	--uiRatingSize: var(--ratingSize, 20px)
+	--uiRatingColor: var(--ratingColor, #eee)
+	--uiRatingColorActive: var(--ratingColorActive, #48689a)
+	--uiRatingStroke: var(--ratingStroke, #222)
+	--uiRatingStrokeWidth: var(--ratingStrokeWidth, 1px)
+
+	display: flex
+	font-size: var(--uiRatingSize)
+	color: var(--uiRatingColor)
+	position: relative
+
+	.rating__control
+		position: absolute
+		left: -9999px
 
 
+	.rating__control:nth-of-type(1):focus ~ .rating__item:nth-of-type(1):before,
+	.rating__control:nth-of-type(2):focus ~ .rating__item:nth-of-type(2):before,
+	.rating__control:nth-of-type(3):focus ~ .rating__item:nth-of-type(3):before,
+	.rating__control:nth-of-type(4):focus ~ .rating__item:nth-of-type(4):before,
+	.rating__control:nth-of-type(5):focus ~ .rating__item:nth-of-type(5):before
+		content: ""
+		box-shadow: 0 0 0 4px
+var--RatingColorActive
+	position: absolute
+		top: -.15em
+		right: 0
+		bottom: -.15em
+		left: 0
+		z-index: -1
 
+.rating__item
+	-webkit-tap-highlight-color: transparent
+	cursor: pointer
+	position: relative
 
+.rating__item
+	padding-left: 2px
+	padding-right: 2px
 
+.rating__star
+	display: block
+	width: 15px
+	height: 15px
 
+	fill: currentColor
+	stroke: var(--uiRatingStroke)
+	stroke-width: var(--uiRatingStrokeWidth)
 
+.rating__label
+	position: absolute
+	top: 0
+	left: -9999px
 
+.rating:hover,
+.rating__control:nth-of-type(1):checked ~ .rating__item:nth-of-type(1),
+.rating__control:nth-of-type(2):checked ~ .rating__item:nth-of-type(-n+2),
+.rating__control:nth-of-type(3):checked ~ .rating__item:nth-of-type(-n+3),
+.rating__control:nth-of-type(4):checked ~ .rating__item:nth-of-type(-n+4),
+.rating__control:nth-of-type(5):checked ~ .rating__item:nth-of-type(-n+5)
+	color: var(--uiRatingColorActive)
 
-
-
-
-
-
+.rating__item:hover ~ .rating__item
+	color: var(--uiRatingColor)
+.rating
+	--ratingSize: 30px
+	--ratingColor: #eee
+	--ratingColorActive: #48689a
